@@ -22,6 +22,13 @@ class User:
 
     def check_name(self,name):
         return self.name == name
+    
+    @classmethod
+    #instance method로도 작성가능하나 통상적 x. (self를 쓰지 않고, User.count와 같이 쓰기 때문)
+    #또, instance가 없을 때 class method 사용가능. 
+    def number_of_users(cls):
+        print(cls.count)
+
 
 
 
@@ -30,5 +37,7 @@ user5 = User('Yuna','rdking9812@naver.com','45678')
 
 
 
-print(user4)
-print(User.count)
+#print(user4)
+#print(User.count)
+User.number_of_users()
+user5.number_of_users()
