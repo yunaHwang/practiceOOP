@@ -29,6 +29,10 @@ class User:
     def number_of_users(cls):
         print(cls.count)
 
+    @staticmethod
+    #class 변수나 instance 변수 중 그 어느것도 쓰지 않을때
+    def is_valid_email(email_address):
+        return "@" in email_address
 
 
 
@@ -36,8 +40,10 @@ user4 = User('Yeonsoo','yeonsoo@gmail.com','12345')
 user5 = User('Yuna','rdking9812@naver.com','45678')
 
 
-
 #print(user4)
 #print(User.count)
-User.number_of_users()
-user5.number_of_users()
+#User.number_of_users()
+#user5.number_of_users()
+
+print(User.is_valid_email("rdking9812"))
+print(User.is_valid_email('rdking9812@gmail.com'))
